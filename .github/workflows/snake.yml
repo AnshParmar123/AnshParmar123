@@ -1,0 +1,95 @@
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-snake-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  snake:
+    name: Generate and publish snake animation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate snake assets
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=%23ff00ff&color_dots=%23ebedf0,%239be9a8,%2340c463,%2330a14e,%23216e39
+            dist/github-snake-dark.svg?color_snake=%23ff00ff&color_dots=%23161b22,%230e4429,%23006d32,%2326a641,%2339d353
+            dist/github-snake.gif?color_snake=%23ff00ff&color_dots=%23161b22,%230e4429,%23006d32,%2326a641,%2339d353
+
+      - name: Validate generated files
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          trap 'echo "::error::Snake asset generation failed."' ERR
+
+          for file in \
+            dist/github-snake.svg \
+            dist/github-snake-dark.svg \
+            dist/github-snake.gif
+          do
+            if [[ ! -s "$file" ]]; then
+              echo "::error file=$file::Expected generated file is missing or empty."
+              exit 1
+            fi
+          done
+
+      - name: Publish to output branch
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -Eeuo pipefail
+          trap 'echo "::error::Publishing to output branch failed."' ERR
+
+          git fetch origin output:refs/remotes/origin/output || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/output; then
+            git worktree add --force .snake-output refs/remotes/origin/output
+          else
+            git worktree add --detach .snake-output
+            (
+              cd .snake-output
+              git checkout --orphan output
+              find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+            )
+          fi
+
+          rm -rf .snake-output/dist
+          mkdir -p .snake-output/dist
+
+          cp dist/github-snake.svg .snake-output/dist/
+          cp dist/github-snake-dark.svg .snake-output/dist/
+          cp dist/github-snake.gif .snake-output/dist/
+          touch .snake-output/.nojekyll
+
+          (
+            cd .snake-output
+            git add --all
+
+            if git diff --cached --quiet; then
+              echo "No changes to publish."
+              exit 0
+            fi
+
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: update contribution snake"
+            git push --force-with-lease origin HEAD:output
+          )
