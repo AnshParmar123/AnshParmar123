@@ -29,8 +29,12 @@
 ## GitHub Stats
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=AnshParmar123&show_icons=true&theme=transparent&title_color=ff00ff&text_color=8b949e&icon_color=39d353&border_color=30363d&rank_icon=github" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnshParmar123&layout=compact&theme=transparent&title_color=ff00ff&text_color=8b949e&border_color=30363d" alt="Top languages" />
+  <a href="https://github.com/AnshParmar123">
+    <img height="170" src="https://github-readme-stats.vercel.app/api?username=AnshParmar123&show_icons=true&include_all_commits=true&theme=default&title_color=ff00ff&text_color=24292f&icon_color=2ea043&border_color=d0d7de" alt="GitHub stats" />
+  </a>
+  <a href="https://github.com/AnshParmar123">
+    <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnshParmar123&layout=compact&theme=default&title_color=ff00ff&text_color=24292f&border_color=d0d7de" alt="Top languages" />
+  </a>
 </p>
 
 <br />
