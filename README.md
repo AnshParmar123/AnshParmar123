@@ -30,31 +30,6 @@
 
 <br />
 
-## Latest Repositories
-
-<!-- LATEST-REPOS:START -->
-<p align="center">
-  <a href="https://github.com/AnshParmar123/FocusGuard"><b>FocusGuard</b></a><br />
-  Browser-based phone detection app with real-time AI alerts.
-</p>
-
-<p align="center">
-  <a href="https://github.com/AnshParmar123/synthetic-persona-bias-auditing-dcgan"><b>synthetic-persona-bias-auditing-dcgan</b></a><br />
-  DCGAN-based synthetic face generation with demographic bias auditing.
-</p>
-
-<p align="center">
-  <a href="https://github.com/AnshParmar123/ansh-portfolio-website"><b>ansh-portfolio-website</b></a><br />
-  Personal portfolio website for showcasing AI, ML, and development work.
-</p>
-<!-- LATEST-REPOS:END -->
-
-<p align="center">
-  This section updates automatically from my newest public repositories.
-</p>
-
-<br />
-
 ## Contribution Snake
 
 <p align="center">
