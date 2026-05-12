@@ -1,0 +1,78 @@
+name: Update Profile README
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update latest repositories section
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+
+            const owner = "AnshParmar123";
+            const repo = "AnshParmar123";
+            const readmePath = "README.md";
+            const startMarker = "<!-- LATEST-REPOS:START -->";
+            const endMarker = "<!-- LATEST-REPOS:END -->";
+
+            const { data: repos } = await github.rest.repos.listForUser({
+              username: owner,
+              sort: "created",
+              direction: "desc",
+              per_page: 100,
+            });
+
+            const latestRepos = repos
+              .filter((item) => !item.private && !item.fork && item.name !== repo)
+              .slice(0, 3);
+
+            const fallbackDescription = "Recently created public repository.";
+            const repoSection = latestRepos
+              .map((item) => {
+                const cleanDescription = (item.description || fallbackDescription)
+                  .replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;")
+                  .trim();
+
+                return [
+                  '<p align="center">',
+                  `  <a href="${item.html_url}"><b>${item.name}</b></a><br />`,
+                  `  ${cleanDescription}`,
+                  "</p>",
+                ].join("\n");
+              })
+              .join("\n\n");
+
+            const readme = fs.readFileSync(readmePath, "utf8");
+            const pattern = new RegExp(
+              `${startMarker}[\\s\\S]*${endMarker}`,
+              "m",
+            );
+
+            const updated = readme.replace(
+              pattern,
+              `${startMarker}\n${repoSection}\n${endMarker}`,
+            );
+
+            fs.writeFileSync(readmePath, updated);
+
+      - name: Commit updated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "Auto-update latest repositories section"
+          git push
