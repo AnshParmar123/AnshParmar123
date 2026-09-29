@@ -1,16 +1,34 @@
-# Hi, I'm Ansh Parmar
+<div align="center">
 
-Full-stack developer exploring AI, machine learning, and open source.
+# Ansh Parmar
 
-I build useful web apps and enjoy making software simple, fast, and reliable.
+**Full-stack development · AI & Machine Learning · Open Source**
 
-[Explore my projects](https://github.com/AnshParmar123?tab=repositories) · [What I'm starring](https://github.com/AnshParmar123?tab=stars)
+Building useful things with code.
 
-### Contributions
+[Projects](https://github.com/AnshParmar123?tab=repositories) &nbsp; / &nbsp; [Stars](https://github.com/AnshParmar123?tab=stars)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake-dark.svg" />
-  <img alt="Animated snake tracing my GitHub contributions" src="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake.svg" width="100%" />
-</picture>
+</div>
 
-<sub>Refreshed automatically twice a day · [Update status](https://github.com/AnshParmar123/AnshParmar123/actions/workflows/snake.yml)</sub>
+---
+
+### A little about me
+
+I enjoy turning ideas into reliable web apps and exploring what AI can do.
+My focus is simple: clean interfaces, thoughtful engineering, and software that solves real problems.
+
+### What I work on
+
+| Web development | AI & Machine Learning | Open source |
+| :--- | :--- | :--- |
+| Building fast, usable applications | Experimenting with intelligent systems | Learning, building, and sharing |
+
+### Explore my work
+
+You'll find my latest projects and experiments in [my repositories](https://github.com/AnshParmar123?tab=repositories&sort=updated), with the most recently updated ones first.
+
+---
+
+<div align="center">
+<sub>Always learning. Always building.</sub>
+</div>
