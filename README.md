@@ -34,14 +34,14 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake.svg" />
-    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/github-snake.svg" />
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/github-snake.svg" />
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/dist/github-snake.gif">View GIF version</a>
+  <a href="https://raw.githubusercontent.com/AnshParmar123/AnshParmar123/output/github-snake.gif">View GIF version</a>
 </p>
 
 <br />
