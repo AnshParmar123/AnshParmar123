@@ -46,7 +46,27 @@
 
 <br />
 
-## Explore My Work
+## GitHub Snapshot
+
+<table align="center">
+  <tr>
+    <td align="center" width="220">
+      <strong>Projects</strong>
+      <br />
+      Full-stack apps, APIs, and polished interfaces
+    </td>
+    <td align="center" width="220">
+      <strong>AI Builder</strong>
+      <br />
+      Machine learning experiments and intelligent tools
+    </td>
+    <td align="center" width="220">
+      <strong>Open Source</strong>
+      <br />
+      Learning, shipping, and improving in public
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <a href="https://github.com/AnshParmar123?tab=repositories">Repositories</a>
@@ -54,8 +74,4 @@
   <a href="https://github.com/AnshParmar123?tab=stars">Starred Projects</a>
   ·
   <a href="https://github.com/AnshParmar123?tab=followers">Community</a>
-</p>
-
-<p align="center">
-  Always building, learning, and shipping projects that turn ideas into practical software.
 </p>
