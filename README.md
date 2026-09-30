@@ -48,6 +48,10 @@
 
 ## GitHub Snapshot
 
+<p align="center">
+  <img src="./assets/profile-pulse.svg" alt="Animated build pulse graph" />
+</p>
+
 <table align="center">
   <tr>
     <td align="center" width="220">

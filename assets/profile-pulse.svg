@@ -1,0 +1,97 @@
+<svg width="860" height="260" viewBox="0 0 860 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Animated build pulse graph</title>
+  <desc id="desc">A dark themed animated line and bar graph for a GitHub profile README.</desc>
+  <style>
+    .label { font: 700 24px Arial, Helvetica, sans-serif; fill: #f0f6fc; }
+    .subtle { font: 500 13px Arial, Helvetica, sans-serif; fill: #8b949e; }
+    .axis { stroke: #30363d; stroke-width: 1; }
+    .grid { stroke: #21262d; stroke-width: 1; }
+    .bar { fill: url(#barGradient); transform-box: fill-box; transform-origin: bottom; animation: rise 2.8s ease-in-out infinite; }
+    .bar:nth-of-type(2) { animation-delay: .12s; }
+    .bar:nth-of-type(3) { animation-delay: .24s; }
+    .bar:nth-of-type(4) { animation-delay: .36s; }
+    .bar:nth-of-type(5) { animation-delay: .48s; }
+    .bar:nth-of-type(6) { animation-delay: .6s; }
+    .bar:nth-of-type(7) { animation-delay: .72s; }
+    .pulse-line {
+      stroke: url(#lineGradient);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 760;
+      stroke-dashoffset: 760;
+      animation: draw 3.6s ease-in-out infinite;
+      filter: url(#glow);
+    }
+    .dot { fill: #2f81f7; animation: blink 1.8s ease-in-out infinite; }
+    .dot:nth-of-type(2) { animation-delay: .2s; }
+    .dot:nth-of-type(3) { animation-delay: .4s; }
+    .dot:nth-of-type(4) { animation-delay: .6s; }
+    @keyframes rise {
+      0%, 100% { transform: scaleY(.45); opacity: .55; }
+      50% { transform: scaleY(1); opacity: 1; }
+    }
+    @keyframes draw {
+      0% { stroke-dashoffset: 760; opacity: .45; }
+      55% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: -760; opacity: .45; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: .45; r: 5; }
+      50% { opacity: 1; r: 8; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="panelGradient" x1="0" x2="860" y1="0" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117" />
+      <stop offset=".55" stop-color="#111827" />
+      <stop offset="1" stop-color="#0b1220" />
+    </linearGradient>
+    <linearGradient id="barGradient" x1="0" x2="0" y1="70" y2="218" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff00ff" />
+      <stop offset=".55" stop-color="#2f81f7" />
+      <stop offset="1" stop-color="#39d353" />
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="90" x2="790" y1="160" y2="88" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39d353" />
+      <stop offset=".5" stop-color="#2f81f7" />
+      <stop offset="1" stop-color="#ff00ff" />
+    </linearGradient>
+    <filter id="glow" x="50" y="40" width="760" height="190" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="858" height="258" rx="18" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" />
+  <text x="42" y="48" class="label">Build Pulse</text>
+  <text x="42" y="72" class="subtle">Projects, AI experiments, and open-source momentum</text>
+
+  <line x1="70" y1="218" x2="790" y2="218" class="axis" />
+  <line x1="70" y1="178" x2="790" y2="178" class="grid" />
+  <line x1="70" y1="138" x2="790" y2="138" class="grid" />
+  <line x1="70" y1="98" x2="790" y2="98" class="grid" />
+
+  <rect class="bar" x="100" y="142" width="44" height="76" rx="10" />
+  <rect class="bar" x="188" y="122" width="44" height="96" rx="10" />
+  <rect class="bar" x="276" y="92" width="44" height="126" rx="10" />
+  <rect class="bar" x="364" y="110" width="44" height="108" rx="10" />
+  <rect class="bar" x="452" y="78" width="44" height="140" rx="10" />
+  <rect class="bar" x="540" y="104" width="44" height="114" rx="10" />
+  <rect class="bar" x="628" y="66" width="44" height="152" rx="10" />
+
+  <path class="pulse-line" d="M92 184 C150 126, 190 148, 236 116 S324 76, 386 126 S490 166, 542 104 S650 64, 730 96" />
+  <circle class="dot" cx="236" cy="116" r="6" />
+  <circle class="dot" cx="386" cy="126" r="6" />
+  <circle class="dot" cx="542" cy="104" r="6" />
+  <circle class="dot" cx="730" cy="96" r="6" />
+
+  <text x="98" y="238" class="subtle">Apps</text>
+  <text x="274" y="238" class="subtle">AI</text>
+  <text x="444" y="238" class="subtle">APIs</text>
+  <text x="620" y="238" class="subtle">Open Source</text>
+</svg>
