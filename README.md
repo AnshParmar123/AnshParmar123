@@ -49,7 +49,7 @@
 ## GitHub Snapshot
 
 <p align="center">
-  <img src="./assets/profile-pulse.svg" alt="Animated build pulse graph" />
+  <img src="./assets/profile-pulse.svg" alt="Animated project constellation for Ansh Parmar" />
 </p>
 
 <table align="center">

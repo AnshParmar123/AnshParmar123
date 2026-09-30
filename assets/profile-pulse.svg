@@ -1,64 +1,60 @@
-<svg width="860" height="260" viewBox="0 0 860 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Animated build pulse graph</title>
-  <desc id="desc">A dark themed animated line and bar graph for a GitHub profile README.</desc>
+<svg width="920" height="320" viewBox="0 0 920 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Ansh Parmar project constellation</title>
+  <desc id="desc">An animated profile graphic showing Ansh Parmar's portfolio, AI, machine learning, vision, and data projects.</desc>
   <style>
-    .label { font: 700 24px Arial, Helvetica, sans-serif; fill: #f0f6fc; }
-    .subtle { font: 500 13px Arial, Helvetica, sans-serif; fill: #8b949e; }
-    .axis { stroke: #30363d; stroke-width: 1; }
-    .grid { stroke: #21262d; stroke-width: 1; }
-    .bar { fill: url(#barGradient); transform-box: fill-box; transform-origin: bottom; animation: rise 2.8s ease-in-out infinite; }
-    .bar:nth-of-type(2) { animation-delay: .12s; }
-    .bar:nth-of-type(3) { animation-delay: .24s; }
-    .bar:nth-of-type(4) { animation-delay: .36s; }
-    .bar:nth-of-type(5) { animation-delay: .48s; }
-    .bar:nth-of-type(6) { animation-delay: .6s; }
-    .bar:nth-of-type(7) { animation-delay: .72s; }
-    .pulse-line {
-      stroke: url(#lineGradient);
-      stroke-width: 5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 760;
-      stroke-dashoffset: 760;
-      animation: draw 3.6s ease-in-out infinite;
-      filter: url(#glow);
+    .title { font: 800 30px Arial, Helvetica, sans-serif; fill: #f0f6fc; }
+    .subtitle { font: 600 14px Arial, Helvetica, sans-serif; fill: #8b949e; }
+    .chip { font: 700 12px Arial, Helvetica, sans-serif; fill: #dbeafe; }
+    .repo { font: 700 15px Arial, Helvetica, sans-serif; fill: #f0f6fc; }
+    .note { font: 600 12px Arial, Helvetica, sans-serif; fill: #8b949e; }
+    .ring { stroke: #30363d; stroke-width: 1.2; stroke-dasharray: 8 10; animation: spin 18s linear infinite; transform-origin: 486px 171px; }
+    .link { stroke: url(#linkGradient); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 12 14; animation: flow 2.8s linear infinite; opacity: .85; }
+    .node-dot { filter: url(#glow); animation: breathe 2.4s ease-in-out infinite; }
+    .node:nth-of-type(2) .node-dot { animation-delay: .15s; }
+    .node:nth-of-type(3) .node-dot { animation-delay: .3s; }
+    .node:nth-of-type(4) .node-dot { animation-delay: .45s; }
+    .node:nth-of-type(5) .node-dot { animation-delay: .6s; }
+    .node:nth-of-type(6) .node-dot { animation-delay: .75s; }
+    .node:nth-of-type(7) .node-dot { animation-delay: .9s; }
+    .spark { animation: blink 1.8s ease-in-out infinite; }
+    .spark:nth-of-type(2) { animation-delay: .35s; }
+    .spark:nth-of-type(3) { animation-delay: .7s; }
+    .spark:nth-of-type(4) { animation-delay: 1.05s; }
+    @keyframes flow {
+      from { stroke-dashoffset: 52; }
+      to { stroke-dashoffset: 0; }
     }
-    .dot { fill: #2f81f7; animation: blink 1.8s ease-in-out infinite; }
-    .dot:nth-of-type(2) { animation-delay: .2s; }
-    .dot:nth-of-type(3) { animation-delay: .4s; }
-    .dot:nth-of-type(4) { animation-delay: .6s; }
-    @keyframes rise {
-      0%, 100% { transform: scaleY(.45); opacity: .55; }
-      50% { transform: scaleY(1); opacity: 1; }
-    }
-    @keyframes draw {
-      0% { stroke-dashoffset: 760; opacity: .45; }
-      55% { stroke-dashoffset: 0; opacity: 1; }
-      100% { stroke-dashoffset: -760; opacity: .45; }
+    @keyframes breathe {
+      0%, 100% { opacity: .72; r: 8; }
+      50% { opacity: 1; r: 12; }
     }
     @keyframes blink {
-      0%, 100% { opacity: .45; r: 5; }
-      50% { opacity: 1; r: 8; }
+      0%, 100% { opacity: .25; }
+      50% { opacity: 1; }
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 
   <defs>
-    <linearGradient id="panelGradient" x1="0" x2="860" y1="0" y2="260" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panelGradient" x1="0" x2="920" y1="0" y2="320" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0d1117" />
-      <stop offset=".55" stop-color="#111827" />
-      <stop offset="1" stop-color="#0b1220" />
+      <stop offset=".48" stop-color="#111827" />
+      <stop offset="1" stop-color="#061320" />
     </linearGradient>
-    <linearGradient id="barGradient" x1="0" x2="0" y1="70" y2="218" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ff00ff" />
-      <stop offset=".55" stop-color="#2f81f7" />
-      <stop offset="1" stop-color="#39d353" />
+    <linearGradient id="avatarGradient" x1="314" x2="658" y1="44" y2="298" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39d353" />
+      <stop offset=".5" stop-color="#2f81f7" />
+      <stop offset="1" stop-color="#ff7b72" />
     </linearGradient>
-    <linearGradient id="lineGradient" x1="90" x2="790" y1="160" y2="88" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linkGradient" x1="210" x2="820" y1="74" y2="250" gradientUnits="userSpaceOnUse">
       <stop stop-color="#39d353" />
       <stop offset=".5" stop-color="#2f81f7" />
       <stop offset="1" stop-color="#ff00ff" />
     </linearGradient>
-    <filter id="glow" x="50" y="40" width="760" height="190" filterUnits="userSpaceOnUse">
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -67,31 +63,76 @@
     </filter>
   </defs>
 
-  <rect x="1" y="1" width="858" height="258" rx="18" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" />
-  <text x="42" y="48" class="label">Build Pulse</text>
-  <text x="42" y="72" class="subtle">Projects, AI experiments, and open-source momentum</text>
+  <rect x="1" y="1" width="918" height="318" rx="22" fill="url(#panelGradient)" stroke="#30363d" stroke-width="2" />
 
-  <line x1="70" y1="218" x2="790" y2="218" class="axis" />
-  <line x1="70" y1="178" x2="790" y2="178" class="grid" />
-  <line x1="70" y1="138" x2="790" y2="138" class="grid" />
-  <line x1="70" y1="98" x2="790" y2="98" class="grid" />
+  <text x="40" y="54" class="title">Ansh Parmar</text>
+  <text x="42" y="80" class="subtitle">Full-stack developer turning AI/ML ideas into polished products</text>
 
-  <rect class="bar" x="100" y="142" width="44" height="76" rx="10" />
-  <rect class="bar" x="188" y="122" width="44" height="96" rx="10" />
-  <rect class="bar" x="276" y="92" width="44" height="126" rx="10" />
-  <rect class="bar" x="364" y="110" width="44" height="108" rx="10" />
-  <rect class="bar" x="452" y="78" width="44" height="140" rx="10" />
-  <rect class="bar" x="540" y="104" width="44" height="114" rx="10" />
-  <rect class="bar" x="628" y="66" width="44" height="152" rx="10" />
+  <rect x="40" y="104" width="118" height="30" rx="15" fill="#13233a" stroke="#2f81f7" />
+  <text x="62" y="124" class="chip">TypeScript</text>
+  <rect x="170" y="104" width="92" height="30" rx="15" fill="#10281d" stroke="#39d353" />
+  <text x="197" y="124" class="chip">Python</text>
+  <rect x="40" y="146" width="116" height="30" rx="15" fill="#2d210b" stroke="#f2cc60" />
+  <text x="67" y="166" class="chip">Notebooks</text>
+  <rect x="168" y="146" width="94" height="30" rx="15" fill="#2d160d" stroke="#ff7b72" />
+  <text x="199" y="166" class="chip">Astro</text>
 
-  <path class="pulse-line" d="M92 184 C150 126, 190 148, 236 116 S324 76, 386 126 S490 166, 542 104 S650 64, 730 96" />
-  <circle class="dot" cx="236" cy="116" r="6" />
-  <circle class="dot" cx="386" cy="126" r="6" />
-  <circle class="dot" cx="542" cy="104" r="6" />
-  <circle class="dot" cx="730" cy="96" r="6" />
+  <text x="42" y="216" class="note">Profile signal</text>
+  <text x="42" y="238" class="repo">AI agents, vision apps, pricing tools,</text>
+  <text x="42" y="260" class="repo">fraud detection, and web experiences</text>
 
-  <text x="98" y="238" class="subtle">Apps</text>
-  <text x="274" y="238" class="subtle">AI</text>
-  <text x="444" y="238" class="subtle">APIs</text>
-  <text x="620" y="238" class="subtle">Open Source</text>
+  <circle cx="486" cy="171" r="116" class="ring" fill="none" />
+  <circle cx="486" cy="171" r="76" class="ring" fill="none" opacity=".65" />
+
+  <line x1="486" y1="171" x2="382" y2="112" class="link" />
+  <line x1="486" y1="171" x2="616" y2="72" class="link" />
+  <line x1="486" y1="171" x2="696" y2="128" class="link" />
+  <line x1="486" y1="171" x2="686" y2="232" class="link" />
+  <line x1="486" y1="171" x2="510" y2="278" class="link" />
+  <line x1="486" y1="171" x2="382" y2="262" class="link" />
+
+  <circle cx="486" cy="171" r="46" fill="#0d1117" stroke="url(#avatarGradient)" stroke-width="4" />
+  <text x="451" y="164" class="repo">Ansh</text>
+  <text x="438" y="187" class="note">AI + Web</text>
+
+  <g class="node">
+    <circle cx="382" cy="112" r="9" fill="#2f81f7" class="node-dot" />
+    <text x="312" y="108" class="repo">Portfolio</text>
+    <text x="312" y="126" class="note">TypeScript</text>
+  </g>
+
+  <g class="node">
+    <circle cx="616" cy="72" r="9" fill="#39d353" class="node-dot" />
+    <text x="638" y="68" class="repo">CascadeSignal</text>
+    <text x="638" y="86" class="note">DeFi risk signals</text>
+  </g>
+
+  <g class="node">
+    <circle cx="696" cy="128" r="9" fill="#f2cc60" class="node-dot" />
+    <text x="716" y="124" class="repo">FocusGuard</text>
+    <text x="716" y="142" class="note">AI phone detector</text>
+  </g>
+
+  <g class="node">
+    <circle cx="686" cy="232" r="9" fill="#ff7b72" class="node-dot" />
+    <text x="706" y="228" class="repo">RepForge</text>
+    <text x="706" y="246" class="note">Vision fitness app</text>
+  </g>
+
+  <g class="node">
+    <circle cx="510" cy="278" r="9" fill="#ff00ff" class="node-dot" />
+    <text x="528" y="272" class="repo">Insight-X</text>
+    <text x="528" y="290" class="note">Complaint intelligence</text>
+  </g>
+
+  <g class="node">
+    <circle cx="382" cy="262" r="9" fill="#7ee787" class="node-dot" />
+    <text x="302" y="286" class="repo">AnomalyBoost</text>
+    <text x="302" y="304" class="note">Fraud detection ML</text>
+  </g>
+
+  <circle cx="824" cy="54" r="3" fill="#2f81f7" class="spark" />
+  <circle cx="858" cy="88" r="3" fill="#39d353" class="spark" />
+  <circle cx="806" cy="276" r="3" fill="#f2cc60" class="spark" />
+  <circle cx="314" cy="32" r="3" fill="#ff7b72" class="spark" />
 </svg>
