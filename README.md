@@ -1,7 +1,7 @@
 <h1 align="center">Hi, I'm Ansh Parmar</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=30&duration=2800&pause=900&color=FF00FF&center=true&vCenter=true&width=900&lines=Full-Stack+Developer;AI+%26+Machine+Learning+Builder;Open-Source+Enthusiast;Crafting+clean+and+scalable+digital+experiences" alt="Typing animation header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&amp;weight=700&amp;size=30&amp;duration=2800&amp;pause=900&amp;color=FF00FF&amp;center=true&amp;vCenter=true&amp;width=900&amp;lines=Full-Stack+Developer;AI+%26+Machine+Learning+Builder;Open-Source+Enthusiast;Crafting+clean+and+scalable+digital+experiences" alt="Typing animation header" />
 </p>
 
 <p align="center">
@@ -46,13 +46,16 @@
 
 <br />
 
-## GitHub Stats
+## Explore My Work
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AnshParmar123&theme=github_dark" alt="GitHub stats" />
+  <a href="https://github.com/AnshParmar123?tab=repositories">Repositories</a>
+  ·
+  <a href="https://github.com/AnshParmar123?tab=stars">Starred Projects</a>
+  ·
+  <a href="https://github.com/AnshParmar123?tab=followers">Community</a>
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AnshParmar123&theme=github_dark" alt="Top languages by repo" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AnshParmar123&theme=github_dark" alt="Top languages by commits" />
+  Always building, learning, and shipping projects that turn ideas into practical software.
 </p>
